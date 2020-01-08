@@ -1,0 +1,6 @@
+insert into Produto values (1,'ÓLEO DIESEL','Diesel')
+insert into Produto values (2,'ÓLEO DIESEL S10','Diesel')
+insert into Produto values (3,'ETANOL HIDRATADO','Etanol')
+insert into Produto values (4,'GASOLINA COMUM','Gasolina')
+insert into Produto values (5,'GASOLINA ADITIVADA','Gasolina')
+insert into Produto values (6,'GNV','Gás')
