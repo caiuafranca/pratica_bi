@@ -1,0 +1,1429 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/19/2019 2:43:48 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MSEDGEWIN10"
+  DTS:CreatorName="MSEDGEWIN10\IEUser"
+  DTS:DTSID="{BD35FA6B-A923-4214-8A7E-20CFD8BD4872}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1301.433"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{7A46B4C7-1494-4C0A-97AF-08DFC7332E18}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{6C22714B-6236-43A3-915D-540C46AAF4AC}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\ANO"
+              componentClassID="Microsoft.UnPivot"
+              contactInfo="Unpivot;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Expands an un-normalized data flow into a more normalized version. Values from multiple columns of a single record expand to multiple records in a single column. For example, expand a table that lists athletic scores with a column for each game to more records and a single score column."
+              name="ANO">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\ANO.Inputs[Unpivot Input]"
+                  hasSideEffects="true"
+                  name="Unpivot Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\ANO.Inputs[Unpivot Input].Columns[ProdutoID]"
+                      cachedDataType="i4"
+                      cachedName="ProdutoID"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProdutoID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[ProdutoID]}</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\ANO.Inputs[Unpivot Input].Columns[JAN]"
+                      cachedDataType="i4"
+                      cachedName="JAN"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[JAN]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[JAN]}</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\ANO.Inputs[Unpivot Input].Columns[FEV]"
+                      cachedDataType="i4"
+                      cachedName="FEV"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FEV]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[FEV]}</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\ANO.Inputs[Unpivot Input].Columns[MAR]"
+                      cachedDataType="i4"
+                      cachedName="MAR"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MAR]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[MAR]}</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\ANO.Inputs[Unpivot Input].Columns[ABR]"
+                      cachedDataType="i4"
+                      cachedName="ABR"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ABR]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[ABR]}</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\ANO.Inputs[Unpivot Input].Columns[MAI]"
+                      cachedDataType="i4"
+                      cachedName="MAI"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MAI]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[MAI]}</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\ANO.Inputs[Unpivot Input].Columns[JUN]"
+                      cachedDataType="i4"
+                      cachedName="JUN"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[JUN]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[JUN]}</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\ANO.Inputs[Unpivot Input].Columns[JUL]"
+                      cachedDataType="i4"
+                      cachedName="JUL"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[JUL]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[JUL]}</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\ANO.Inputs[Unpivot Input].Columns[AGO]"
+                      cachedDataType="i4"
+                      cachedName="AGO"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[AGO]}</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\ANO.Inputs[Unpivot Input].Columns[SET]"
+                      cachedDataType="i4"
+                      cachedName="SET"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SET]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[SET]}</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\ANO.Inputs[Unpivot Input].Columns[OUT]"
+                      cachedDataType="i4"
+                      cachedName="OUT"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[OUT]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[OUT]}</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\ANO.Inputs[Unpivot Input].Columns[NOV]"
+                      cachedDataType="i4"
+                      cachedName="NOV"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NOV]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[NOV]}</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\ANO.Inputs[Unpivot Input].Columns[DEZ]"
+                      cachedDataType="i4"
+                      cachedName="DEZ"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[DEZ]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[DEZ]}</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\ANO.Inputs[Unpivot Input].Columns[FILE_NAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="200"
+                      cachedName="FILE_NAME"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FILE_NAME]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[FILE_NAME]}</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\ANO.Inputs[Unpivot Input].Columns[CREATE_TIME]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CREATE_TIME"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CREATE_TIME]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[CREATE_TIME]}</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\ANO.Outputs[Unpivot Output]"
+                  name="Unpivot Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[Pivot Key Value]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[Pivot Key Value]"
+                      name="Pivot Key Value">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">true</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[ProdutoID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[ProdutoID]"
+                      name="ProdutoID">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[JAN]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[JAN]"
+                      name="JAN">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[FEV]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[FEV]"
+                      name="FEV">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[MAR]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[MAR]"
+                      name="MAR">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[ABR]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[ABR]"
+                      name="ABR">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[MAI]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[MAI]"
+                      name="MAI">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[JUN]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[JUN]"
+                      name="JUN">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[JUL]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[JUL]"
+                      name="JUL">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[AGO]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[AGO]"
+                      name="AGO">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[SET]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[SET]"
+                      name="SET">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[OUT]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[OUT]"
+                      name="OUT">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[NOV]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[NOV]"
+                      name="NOV">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[DEZ]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[DEZ]"
+                      name="DEZ">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[FILE_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      lineageId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[FILE_NAME]"
+                      name="FILE_NAME">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[CREATE_TIME]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\ANO.Outputs[Unpivot Output].Columns[CREATE_TIME]"
+                      name="CREATE_TIME">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\MES"
+              componentClassID="Microsoft.UnPivot"
+              contactInfo="Unpivot;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Expands an un-normalized data flow into a more normalized version. Values from multiple columns of a single record expand to multiple records in a single column. For example, expand a table that lists athletic scores with a column for each game to more records and a single score column."
+              name="MES">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\MES.Inputs[Unpivot Input]"
+                  hasSideEffects="true"
+                  name="Unpivot Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\MES.Inputs[Unpivot Input].Columns[JAN]"
+                      cachedDataType="i4"
+                      cachedName="JAN"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[JAN]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\MES.Outputs[Unpivot Output].Columns[Mes]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue">JAN</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\MES.Inputs[Unpivot Input].Columns[FEV]"
+                      cachedDataType="i4"
+                      cachedName="FEV"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FEV]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\MES.Outputs[Unpivot Output].Columns[Mes]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue">FEV</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\MES.Inputs[Unpivot Input].Columns[MAR]"
+                      cachedDataType="i4"
+                      cachedName="MAR"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MAR]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\MES.Outputs[Unpivot Output].Columns[Mes]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue">MAR</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\MES.Inputs[Unpivot Input].Columns[ABR]"
+                      cachedDataType="i4"
+                      cachedName="ABR"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ABR]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\MES.Outputs[Unpivot Output].Columns[Mes]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue">ABR</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\MES.Inputs[Unpivot Input].Columns[MAI]"
+                      cachedDataType="i4"
+                      cachedName="MAI"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MAI]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\MES.Outputs[Unpivot Output].Columns[Mes]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue">MAI</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\MES.Inputs[Unpivot Input].Columns[JUN]"
+                      cachedDataType="i4"
+                      cachedName="JUN"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[JUN]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\MES.Outputs[Unpivot Output].Columns[Mes]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue">JUN</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\MES.Inputs[Unpivot Input].Columns[JUL]"
+                      cachedDataType="i4"
+                      cachedName="JUL"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[JUL]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\MES.Outputs[Unpivot Output].Columns[Mes]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue">JUL</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\MES.Inputs[Unpivot Input].Columns[AGO]"
+                      cachedDataType="i4"
+                      cachedName="AGO"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGO]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\MES.Outputs[Unpivot Output].Columns[Mes]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue">AGO</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\MES.Inputs[Unpivot Input].Columns[SET]"
+                      cachedDataType="i4"
+                      cachedName="SET"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SET]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\MES.Outputs[Unpivot Output].Columns[Mes]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue">SET</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\MES.Inputs[Unpivot Input].Columns[OUT]"
+                      cachedDataType="i4"
+                      cachedName="OUT"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[OUT]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\MES.Outputs[Unpivot Output].Columns[Mes]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue">OUT</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\MES.Inputs[Unpivot Input].Columns[NOV]"
+                      cachedDataType="i4"
+                      cachedName="NOV"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NOV]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\MES.Outputs[Unpivot Output].Columns[Mes]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue">NOV</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\MES.Inputs[Unpivot Input].Columns[DEZ]"
+                      cachedDataType="i4"
+                      cachedName="DEZ"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[DEZ]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\MES.Outputs[Unpivot Output].Columns[Mes]}</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue">DEZ</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\MES.Inputs[Unpivot Input].Columns[FILE_NAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="200"
+                      cachedName="FILE_NAME"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FILE_NAME]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\MES.Outputs[Unpivot Output].Columns[FileName]}</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\MES.Inputs[Unpivot Input].Columns[ProdutoID]"
+                      cachedDataType="i4"
+                      cachedName="ProdutoID"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProdutoID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                          name="DestinationColumn">#{Package\Data Flow Task\MES.Outputs[Unpivot Output].Columns[ProdutoID]}</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the value written to the PivotKey column in the output row."
+                          expressionType="Notify"
+                          name="PivotKeyValue" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\MES.Outputs[Unpivot Output]"
+                  name="Unpivot Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\MES.Outputs[Unpivot Output].Columns[Pivot Key Value]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task\MES.Outputs[Unpivot Output].Columns[Pivot Key Value]"
+                      name="Pivot Key Value">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">true</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\MES.Outputs[Unpivot Output].Columns[Mes]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\MES.Outputs[Unpivot Output].Columns[Mes]"
+                      name="Mes">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\MES.Outputs[Unpivot Output].Columns[FileName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      lineageId="Package\Data Flow Task\MES.Outputs[Unpivot Output].Columns[FileName]"
+                      name="FileName">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\MES.Outputs[Unpivot Output].Columns[ProdutoID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\MES.Outputs[Unpivot Output].Columns[ProdutoID]"
+                      name="ProdutoID">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                          name="PivotKey">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Multicast"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              name="Multicast">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 2]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 2"
+                  synchronousInputId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 3]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 3"
+                  synchronousInputId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[META_VENDA_LOG]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="{816740BA-061A-4F4C-9725-5C2025960459}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.SSIS_SYSTEM.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProdutoID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ProdutoID]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProdutoID]"
+                      name="ProdutoID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[JAN]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[JAN]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[JAN]"
+                      name="JAN"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FEV]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FEV]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FEV]"
+                      name="FEV"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MAR]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MAR]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MAR]"
+                      name="MAR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ABR]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ABR]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ABR]"
+                      name="ABR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MAI]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MAI]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MAI]"
+                      name="MAI"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[JUN]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[JUN]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[JUN]"
+                      name="JUN"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[JUL]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[JUL]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[JUL]"
+                      name="JUL"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGO]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGO]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AGO]"
+                      name="AGO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SET]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SET]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SET]"
+                      name="SET"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[OUT]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[OUT]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[OUT]"
+                      name="OUT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NOV]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NOV]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NOV]"
+                      name="NOV"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[DEZ]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DEZ]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[DEZ]"
+                      name="DEZ"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FILE_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FILE_NAME]"
+                      length="200"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FILE_NAME]"
+                      name="FILE_NAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CREATE_TIME]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CREATE_TIME]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CREATE_TIME]"
+                      name="CREATE_TIME"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ProdutoID]"
+                      dataType="i4"
+                      name="ProdutoID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[JAN]"
+                      dataType="i4"
+                      name="JAN" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FEV]"
+                      dataType="i4"
+                      name="FEV" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MAR]"
+                      dataType="i4"
+                      name="MAR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ABR]"
+                      dataType="i4"
+                      name="ABR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MAI]"
+                      dataType="i4"
+                      name="MAI" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[JUN]"
+                      dataType="i4"
+                      name="JUN" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[JUL]"
+                      dataType="i4"
+                      name="JUL" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AGO]"
+                      dataType="i4"
+                      name="AGO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SET]"
+                      dataType="i4"
+                      name="SET" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[OUT]"
+                      dataType="i4"
+                      name="OUT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NOV]"
+                      dataType="i4"
+                      name="NOV" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DEZ]"
+                      dataType="i4"
+                      name="DEZ" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FILE_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="FILE_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CREATE_TIME]"
+                      dataType="dbTimeStamp"
+                      name="CREATE_TIME" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ProdutoID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ProdutoID]"
+                      name="ProdutoID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[JAN]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[JAN]"
+                      name="JAN" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FEV]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FEV]"
+                      name="FEV" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MAR]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MAR]"
+                      name="MAR" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ABR]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ABR]"
+                      name="ABR" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MAI]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MAI]"
+                      name="MAI" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[JUN]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[JUN]"
+                      name="JUN" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[JUL]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[JUL]"
+                      name="JUL" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGO]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AGO]"
+                      name="AGO" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SET]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SET]"
+                      name="SET" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[OUT]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[OUT]"
+                      name="OUT" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NOV]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NOV]"
+                      name="NOV" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DEZ]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DEZ]"
+                      name="DEZ" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FILE_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FILE_NAME]"
+                      name="FILE_NAME" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CREATE_TIME]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CREATE_TIME]"
+                      name="CREATE_TIME" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Multicast Output 1]"
+              endId="Package\Data Flow Task\MES.Inputs[Unpivot Input]"
+              name="Multicast Output 1"
+              startId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Multicast Output 2]"
+              endId="Package\Data Flow Task\ANO.Inputs[Unpivot Input]"
+              name="Multicast Output 2"
+              startId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 2]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task"
+          TopLeft="586,273" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Data Flow Task\OLE DB Source"
+          TopLeft="192,234" />
+        <NodeLayout
+          Size="99,42"
+          Id="Package\Data Flow Task\MES"
+          TopLeft="624,139" />
+        <NodeLayout
+          Size="100,42"
+          Id="Package\Data Flow Task\ANO"
+          TopLeft="630,321" />
+        <NodeLayout
+          Size="120,42"
+          Id="Package\Data Flow Task\Multicast"
+          TopLeft="410,233" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="342,254.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="68,0"
+              Start="0,0"
+              End="60.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="60.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Multicast Output 1]"
+          TopLeft="470,233">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="203.5,-52"
+              Start="0,0"
+              End="203.5,-44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-22" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-22"
+                    Point2="0,-26"
+                    Point3="4,-26" />
+                  <mssgle:LineSegment
+                    End="199.5,-26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="199.5,-26"
+                    Point2="203.5,-26"
+                    Point3="203.5,-30" />
+                  <mssgle:LineSegment
+                    End="203.5,-44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Multicast Output 2]"
+          TopLeft="470,275">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="210,46"
+              Start="0,0"
+              End="210,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19"
+                    Point2="0,23"
+                    Point3="4,23" />
+                  <mssgle:LineSegment
+                    End="206,23" />
+                  <mssgle:CubicBezierSegment
+                    Point1="206,23"
+                    Point2="210,23"
+                    Point3="210,27" />
+                  <mssgle:LineSegment
+                    End="210,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

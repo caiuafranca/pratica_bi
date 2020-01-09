@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="LOCALHOST DW"
+  DTS:DTSID="{7FA748F6-9A54-43D1-9605-31183AE4DD21}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=SISS.DW;Provider=MSOLEDBSQL.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-{7FA748F6-9A54-43D1-9605-31183AE4DD21}localhost.SSIS_DW.sa;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA8M01UB4DGUSrl9wKFmGA7gAAAAACAAAAAAAQZgAAAAEAACAAAAAXuMBTg/j3hxC5/K5qZZROs3QwAp/QLDKubaQJY/pfFgAAAAAOgAAAAAIAACAAAAAsBj37xyHYr/l3SNsK0KLKLiKH7zWZR8K86L1rd8jWs4AAAAAlsclL4Go1+SejfbFuaKJzqIPIDNP2UrM8wNmBkS2ffFr7vMY7hxXtDOkTNvy8bSvCxhN9NxPBDTEMuKSW7Gbsp0bMuIHpkGNnqGLq2Eg5lSb449J6EjFKdIosfBCZBA/1ncDZfpsExxH3EjULvWSuYjU0pof0h7UbQlo30rEy3UAAAACrGkHijaBP8Y4RY64o8qsnVVJgo+9m3YgzeqCA/fiDN1qoS+ivw9ezoX5dz9lQupuZqHEGdCsUs8KrVmUwMrzV</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

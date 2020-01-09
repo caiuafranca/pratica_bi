@@ -1,0 +1,2533 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/19/2019 4:57:57 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MSEDGEWIN10"
+  DTS:CreatorName="MSEDGEWIN10\IEUser"
+  DTS:DTSID="{5D9F414F-A9C6-498D-8E9A-76593671BFA5}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1301.433"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="FATO_VENDA"
+  DTS:PackageType="5"
+  DTS:VersionBuild="22"
+  DTS:VersionGUID="{E5AA52F1-C090-4143-9017-2C7B9E87DC7D}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\FATO_VENDA"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{EA7F4E57-D92B-47A6-B753-1A604C705CDC}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="FATO_VENDA"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\FATO_VENDA\AGG_VALOR_VENDA"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregate;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Aggregates data with functions such as Average, Sum, Count, Max, and Min. For example, group data to compute the sum of sales per product or the average visits per day."
+              name="AGG_VALOR_VENDA"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of distinct values in a column that the aggregation counts distinctly. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no CountDistinctScale value is used."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of distinct values in a column that the aggregation counts distinctly. If a CountDistinctScale value is specified, the value in CountDistinctKeys takes precedence."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage by which memory can be extended during the aggregation. Valid values are between 1 and 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\FATO_VENDA\AGG_VALOR_VENDA.Inputs[Aggregate Input 1]"
+                  name="Aggregate Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\FATO_VENDA\AGG_VALOR_VENDA.Inputs[Aggregate Input 1].Columns[CodEmpresa]"
+                      cachedDataType="i4"
+                      cachedName="CodEmpresa"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[CodEmpresa]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\AGG_VALOR_VENDA.Inputs[Aggregate Input 1].Columns[ProdutoID]"
+                      cachedDataType="i4"
+                      cachedName="ProdutoID"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[ProdutoID]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\AGG_VALOR_VENDA.Inputs[Aggregate Input 1].Columns[DtEmissao]"
+                      cachedDataType="i4"
+                      cachedName="DtEmissao"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[DtEmissao]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\AGG_VALOR_VENDA.Inputs[Aggregate Input 1].Columns[ValorVenda]"
+                      cachedDataType="numeric"
+                      cachedName="ValorVenda"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[ValorVenda]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\AGG_VALOR_VENDA.Inputs[Aggregate Input 1].Columns[Qtd]"
+                      cachedDataType="i4"
+                      cachedName="Qtd"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[Qtd]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\AGG_VALOR_VENDA.Inputs[Aggregate Input 1].Columns[ClienteID]"
+                      cachedDataType="i4"
+                      cachedName="ClienteID"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[ClienteID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\FATO_VENDA\AGG_VALOR_VENDA.Outputs[Aggregate Output 1]"
+                  name="Aggregate Output 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\AGG_VALOR_VENDA.Outputs[Aggregate Output 1].Columns[Empresa_ID]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\AGG_VALOR_VENDA.Outputs[Aggregate Output 1].Columns[Empresa_ID]"
+                      name="Empresa_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[CodEmpresa]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\AGG_VALOR_VENDA.Outputs[Aggregate Output 1].Columns[Produto_ID]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\AGG_VALOR_VENDA.Outputs[Aggregate Output 1].Columns[Produto_ID]"
+                      name="Produto_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[ProdutoID]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\AGG_VALOR_VENDA.Outputs[Aggregate Output 1].Columns[Data]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\AGG_VALOR_VENDA.Outputs[Aggregate Output 1].Columns[Data]"
+                      name="Data">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[DtEmissao]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\AGG_VALOR_VENDA.Outputs[Aggregate Output 1].Columns[ValorVenda]"
+                      dataType="numeric"
+                      lineageId="Package\FATO_VENDA\AGG_VALOR_VENDA.Outputs[Aggregate Output 1].Columns[ValorVenda]"
+                      name="ValorVenda"
+                      precision="18"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[ValorVenda]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\AGG_VALOR_VENDA.Outputs[Aggregate Output 1].Columns[Qtd]"
+                      dataType="i8"
+                      lineageId="Package\FATO_VENDA\AGG_VALOR_VENDA.Outputs[Aggregate Output 1].Columns[Qtd]"
+                      name="Qtd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[Qtd]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\AGG_VALOR_VENDA.Outputs[Aggregate Output 1].Columns[Cliente_ID]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\AGG_VALOR_VENDA.Outputs[Aggregate Output 1].Columns[Cliente_ID]"
+                      name="Cliente_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[ClienteID]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregate;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Aggregates data with functions such as Average, Sum, Count, Max, and Min. For example, group data to compute the sum of sales per product or the average visits per day."
+              name="AGG_VENDA_LIQ_E_BRUTA"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of distinct values in a column that the aggregation counts distinctly. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no CountDistinctScale value is used."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of distinct values in a column that the aggregation counts distinctly. If a CountDistinctScale value is specified, the value in CountDistinctKeys takes precedence."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage by which memory can be extended during the aggregation. Valid values are between 1 and 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Inputs[Aggregate Input 1]"
+                  name="Aggregate Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Inputs[Aggregate Input 1].Columns[CodEmpresa]"
+                      cachedDataType="i4"
+                      cachedName="CodEmpresa"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[CodEmpresa]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Inputs[Aggregate Input 1].Columns[ClienteID]"
+                      cachedDataType="i4"
+                      cachedName="ClienteID"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[ClienteID]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Inputs[Aggregate Input 1].Columns[ProdutoID]"
+                      cachedDataType="i4"
+                      cachedName="ProdutoID"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[ProdutoID]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Inputs[Aggregate Input 1].Columns[DtEmissao]"
+                      cachedDataType="i4"
+                      cachedName="DtEmissao"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[DtEmissao]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Inputs[Aggregate Input 1].Columns[Venda_Liquida]"
+                      cachedDataType="numeric"
+                      cachedName="Venda_Liquida"
+                      cachedPrecision="38"
+                      cachedScale="4"
+                      lineageId="Package\FATO_VENDA\Derived Column.Outputs[Derived Column Output].Columns[Venda_Liquida]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Inputs[Aggregate Input 1].Columns[Venda_Bruta]"
+                      cachedDataType="numeric"
+                      cachedName="Venda_Bruta"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\FATO_VENDA\Derived Column.Outputs[Derived Column Output].Columns[Venda_Bruta]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Outputs[Aggregate Output 1]"
+                  name="Aggregate Output 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Outputs[Aggregate Output 1].Columns[Empresa_ID]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Outputs[Aggregate Output 1].Columns[Empresa_ID]"
+                      name="Empresa_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[CodEmpresa]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Outputs[Aggregate Output 1].Columns[Cliente_ID]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Outputs[Aggregate Output 1].Columns[Cliente_ID]"
+                      name="Cliente_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[ClienteID]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Outputs[Aggregate Output 1].Columns[Produto_ID]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Outputs[Aggregate Output 1].Columns[Produto_ID]"
+                      name="Produto_ID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[ProdutoID]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Outputs[Aggregate Output 1].Columns[Data]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Outputs[Aggregate Output 1].Columns[Data]"
+                      name="Data">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[DtEmissao]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Outputs[Aggregate Output 1].Columns[Venda_Liquida]"
+                      dataType="numeric"
+                      lineageId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Outputs[Aggregate Output 1].Columns[Venda_Liquida]"
+                      name="Venda_Liquida"
+                      precision="38"
+                      scale="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\FATO_VENDA\Derived Column.Outputs[Derived Column Output].Columns[Venda_Liquida]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Outputs[Aggregate Output 1].Columns[Venda_Bruta]"
+                      dataType="numeric"
+                      lineageId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Outputs[Aggregate Output 1].Columns[Venda_Bruta]"
+                      name="Venda_Bruta"
+                      precision="18"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\FATO_VENDA\Derived Column.Outputs[Derived Column Output].Columns[Venda_Bruta]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\FATO_VENDA\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\FATO_VENDA\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Derived Column.Inputs[Derived Column Input].Columns[ValorVenda]"
+                      cachedDataType="numeric"
+                      cachedName="ValorVenda"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[ValorVenda]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Derived Column.Inputs[Derived Column Input].Columns[AliqTributo_01]"
+                      cachedDataType="numeric"
+                      cachedName="AliqTributo_01"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[AliqTributo_01]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Derived Column.Inputs[Derived Column Input].Columns[AliqTributo_02]"
+                      cachedDataType="numeric"
+                      cachedName="AliqTributo_02"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[AliqTributo_02]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Derived Column.Inputs[Derived Column Input].Columns[AliqTributo_03]"
+                      cachedDataType="numeric"
+                      cachedName="AliqTributo_03"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[AliqTributo_03]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\FATO_VENDA\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\FATO_VENDA\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\Derived Column.Outputs[Derived Column Output].Columns[Venda_Liquida]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\FATO_VENDA\Derived Column.Outputs[Derived Column Output].Columns[Venda_Liquida]"
+                      name="Venda_Liquida"
+                      precision="38"
+                      scale="4"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[ValorVenda]} - ((#{Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[ValorVenda]} * #{Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[AliqTributo_01]}) + (#{Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[ValorVenda]} * #{Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[AliqTributo_02]}) + (#{Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[ValorVenda]} * #{Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[AliqTributo_03]}))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ValorVenda - ((ValorVenda * AliqTributo_01) + (ValorVenda * AliqTributo_02) + (ValorVenda * AliqTributo_03))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\Derived Column.Outputs[Derived Column Output].Columns[Venda_Bruta]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\FATO_VENDA\Derived Column.Outputs[Derived Column Output].Columns[Venda_Bruta]"
+                      name="Venda_Bruta"
+                      precision="18"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[ValorVenda]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ValorVenda</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\FATO_VENDA\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\FATO_VENDA\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="DW_STAGE_VENDA_TRIBUTO"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DW_StageVendaTributo]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Connections[OleDbConnection]"
+                  connectionManagerID="{7FA748F6-9A54-43D1-9605-31183AE4DD21}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LOCALHOST DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[ValorVenda]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[ValorVenda]"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[ValorVenda]"
+                      name="ValorVenda"
+                      precision="18"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[Qtd]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[Qtd]"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[Qtd]"
+                      name="Qtd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[PedidoStatus]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[PedidoStatus]"
+                      length="1"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[PedidoStatus]"
+                      name="PedidoStatus"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[EmpresaUF]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[EmpresaUF]"
+                      length="200"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[EmpresaUF]"
+                      name="EmpresaUF"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[ClienteUF]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[ClienteUF]"
+                      length="200"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[ClienteUF]"
+                      name="ClienteUF"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[AliqTributo_01]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[AliqTributo_01]"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[AliqTributo_01]"
+                      name="AliqTributo_01"
+                      precision="18"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[AliqTributo_02]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[AliqTributo_02]"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[AliqTributo_02]"
+                      name="AliqTributo_02"
+                      precision="18"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[AliqTributo_03]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[AliqTributo_03]"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[AliqTributo_03]"
+                      name="AliqTributo_03"
+                      precision="18"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[PedidoNum]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[PedidoNum]"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[PedidoNum]"
+                      name="PedidoNum"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[ProdutoID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[ProdutoID]"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[ProdutoID]"
+                      name="ProdutoID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[PrecoUnit]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[PrecoUnit]"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[PrecoUnit]"
+                      name="PrecoUnit"
+                      precision="18"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[CustoUnit]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[CustoUnit]"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[CustoUnit]"
+                      name="CustoUnit"
+                      precision="18"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[CodEmpresa]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[CodEmpresa]"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[CodEmpresa]"
+                      name="CodEmpresa"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[DtEmissao]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[DtEmissao]"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[DtEmissao]"
+                      name="DtEmissao"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[ClienteID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[ClienteID]"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[ClienteID]"
+                      name="ClienteID"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[ValorVenda]"
+                      dataType="numeric"
+                      name="ValorVenda"
+                      precision="28"
+                      scale="18" />
+                    <externalMetadataColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[Qtd]"
+                      dataType="i4"
+                      name="Qtd" />
+                    <externalMetadataColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[PedidoStatus]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="PedidoStatus" />
+                    <externalMetadataColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[EmpresaUF]"
+                      dataType="i4"
+                      name="EmpresaUF" />
+                    <externalMetadataColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[ClienteUF]"
+                      dataType="i4"
+                      name="ClienteUF" />
+                    <externalMetadataColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[AliqTributo_01]"
+                      dataType="numeric"
+                      name="AliqTributo_01"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[AliqTributo_02]"
+                      dataType="numeric"
+                      name="AliqTributo_02"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[AliqTributo_03]"
+                      dataType="numeric"
+                      name="AliqTributo_03"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[PedidoNum]"
+                      dataType="i4"
+                      name="PedidoNum" />
+                    <externalMetadataColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[ProdutoID]"
+                      dataType="i4"
+                      name="ProdutoID" />
+                    <externalMetadataColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[PrecoUnit]"
+                      dataType="numeric"
+                      name="PrecoUnit"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[CustoUnit]"
+                      dataType="numeric"
+                      name="CustoUnit"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[CodEmpresa]"
+                      dataType="i4"
+                      name="CodEmpresa" />
+                    <externalMetadataColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[DtEmissao]"
+                      dataType="i4"
+                      name="DtEmissao" />
+                    <externalMetadataColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].ExternalColumns[ClienteID]"
+                      dataType="i4"
+                      name="ClienteID" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[PedidoNum]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[PedidoNum]"
+                      name="PedidoNum" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[ProdutoID]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[ProdutoID]"
+                      name="ProdutoID" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[PrecoUnit]"
+                      dataType="numeric"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[PrecoUnit]"
+                      name="PrecoUnit"
+                      precision="18"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[ValorVenda]"
+                      dataType="numeric"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[ValorVenda]"
+                      name="ValorVenda"
+                      precision="28"
+                      scale="18" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[CustoUnit]"
+                      dataType="numeric"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[CustoUnit]"
+                      name="CustoUnit"
+                      precision="18"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[Qtd]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[Qtd]"
+                      name="Qtd" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[CodEmpresa]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[CodEmpresa]"
+                      name="CodEmpresa" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[DtEmissao]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[DtEmissao]"
+                      name="DtEmissao" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[ClienteID]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[ClienteID]"
+                      name="ClienteID" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[PedidoStatus]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[PedidoStatus]"
+                      name="PedidoStatus" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[EmpresaUF]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[EmpresaUF]"
+                      name="EmpresaUF" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[ClienteUF]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[ClienteUF]"
+                      name="ClienteUF" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[AliqTributo_01]"
+                      dataType="numeric"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[AliqTributo_01]"
+                      name="AliqTributo_01"
+                      precision="18"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[AliqTributo_02]"
+                      dataType="numeric"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[AliqTributo_02]"
+                      name="AliqTributo_02"
+                      precision="18"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[AliqTributo_03]"
+                      dataType="numeric"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[AliqTributo_03]"
+                      name="AliqTributo_03"
+                      precision="18"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\FATO_VENDA\FATO_VENDA_DW"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="FATO_VENDA_DW"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[FatoVenda]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\FATO_VENDA\FATO_VENDA_DW.Connections[OleDbConnection]"
+                  connectionManagerID="{7FA748F6-9A54-43D1-9605-31183AE4DD21}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LOCALHOST DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input].Columns[Cliente_ID]"
+                      cachedDataType="i4"
+                      cachedName="Cliente_ID"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input].ExternalColumns[Cliente_ID]"
+                      lineageId="Package\FATO_VENDA\Merge Join.Outputs[Merge Join Output].Columns[Cliente_ID]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input].Columns[Empresa_ID]"
+                      cachedDataType="i4"
+                      cachedName="Empresa_ID"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input].ExternalColumns[Empresa_ID]"
+                      lineageId="Package\FATO_VENDA\Merge Join.Outputs[Merge Join Output].Columns[Empresa_ID]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input].Columns[Produto_ID]"
+                      cachedDataType="i4"
+                      cachedName="Produto_ID"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input].ExternalColumns[Produto_ID]"
+                      lineageId="Package\FATO_VENDA\Merge Join.Outputs[Merge Join Output].Columns[Produto_ID]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input].Columns[Data]"
+                      cachedDataType="i4"
+                      cachedName="Data"
+                      cachedSortKeyPosition="4"
+                      externalMetadataColumnId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input].ExternalColumns[Data]"
+                      lineageId="Package\FATO_VENDA\Merge Join.Outputs[Merge Join Output].Columns[Data]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input].Columns[Valor_Venda]"
+                      cachedDataType="numeric"
+                      cachedName="Valor_Venda"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input].ExternalColumns[Valor_Venda]"
+                      lineageId="Package\FATO_VENDA\Merge Join.Outputs[Merge Join Output].Columns[Valor_Venda]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input].Columns[Qtd]"
+                      cachedDataType="i8"
+                      cachedName="Qtd"
+                      externalMetadataColumnId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input].ExternalColumns[Qtd]"
+                      lineageId="Package\FATO_VENDA\Merge Join.Outputs[Merge Join Output].Columns[Qtd]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input].Columns[Venda_Liquida]"
+                      cachedDataType="numeric"
+                      cachedName="Venda_Liquida"
+                      cachedPrecision="38"
+                      cachedScale="4"
+                      externalMetadataColumnId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input].ExternalColumns[Venda_Liquida]"
+                      lineageId="Package\FATO_VENDA\Merge Join.Outputs[Merge Join Output].Columns[Venda_Liquida]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input].Columns[Venda_Bruta]"
+                      cachedDataType="numeric"
+                      cachedName="Venda_Bruta"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input].ExternalColumns[Venda_Bruta]"
+                      lineageId="Package\FATO_VENDA\Merge Join.Outputs[Merge Join Output].Columns[Venda_Bruta]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input].ExternalColumns[Empresa_ID]"
+                      dataType="i4"
+                      name="Empresa_ID" />
+                    <externalMetadataColumn
+                      refId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input].ExternalColumns[Cliente_ID]"
+                      dataType="i4"
+                      name="Cliente_ID" />
+                    <externalMetadataColumn
+                      refId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input].ExternalColumns[Produto_ID]"
+                      dataType="i4"
+                      name="Produto_ID" />
+                    <externalMetadataColumn
+                      refId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input].ExternalColumns[Data]"
+                      dataType="dbDate"
+                      name="Data" />
+                    <externalMetadataColumn
+                      refId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input].ExternalColumns[Valor_Venda]"
+                      dataType="numeric"
+                      name="Valor_Venda"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input].ExternalColumns[Venda_Bruta]"
+                      dataType="numeric"
+                      name="Venda_Bruta"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input].ExternalColumns[Venda_Liquida]"
+                      dataType="numeric"
+                      name="Venda_Liquida"
+                      precision="38"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input].ExternalColumns[Qtd]"
+                      dataType="i4"
+                      name="Qtd" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\FATO_VENDA\FATO_VENDA_DW.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\FATO_VENDA_DW.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\FATO_VENDA_DW.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\FATO_VENDA_DW.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\FATO_VENDA_DW.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\FATO_VENDA\Merge Join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">4</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\FATO_VENDA\Merge Join.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Merge Join.Inputs[Merge Join Left Input].Columns[Cliente_ID]"
+                      cachedDataType="i4"
+                      cachedName="Cliente_ID"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\FATO_VENDA\Sort.Outputs[Sort Output].Columns[Cliente_ID]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Merge Join.Inputs[Merge Join Left Input].Columns[Empresa_ID]"
+                      cachedDataType="i4"
+                      cachedName="Empresa_ID"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\FATO_VENDA\Sort.Outputs[Sort Output].Columns[Empresa_ID]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Merge Join.Inputs[Merge Join Left Input].Columns[Produto_ID]"
+                      cachedDataType="i4"
+                      cachedName="Produto_ID"
+                      cachedSortKeyPosition="3"
+                      lineageId="Package\FATO_VENDA\Sort.Outputs[Sort Output].Columns[Produto_ID]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Merge Join.Inputs[Merge Join Left Input].Columns[Data]"
+                      cachedDataType="i4"
+                      cachedName="Data"
+                      cachedSortKeyPosition="4"
+                      lineageId="Package\FATO_VENDA\Sort.Outputs[Sort Output].Columns[Data]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Merge Join.Inputs[Merge Join Left Input].Columns[ValorVenda]"
+                      cachedDataType="numeric"
+                      cachedName="ValorVenda"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\FATO_VENDA\Sort.Outputs[Sort Output].Columns[ValorVenda]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Merge Join.Inputs[Merge Join Left Input].Columns[Qtd]"
+                      cachedDataType="i8"
+                      cachedName="Qtd"
+                      lineageId="Package\FATO_VENDA\Sort.Outputs[Sort Output].Columns[Qtd]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\FATO_VENDA\Merge Join.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Merge Join.Inputs[Merge Join Right Input].Columns[Empresa_ID]"
+                      cachedDataType="i4"
+                      cachedName="Empresa_ID"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\FATO_VENDA\Sort 1.Outputs[Sort Output].Columns[Empresa_ID]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Merge Join.Inputs[Merge Join Right Input].Columns[Cliente_ID]"
+                      cachedDataType="i4"
+                      cachedName="Cliente_ID"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\FATO_VENDA\Sort 1.Outputs[Sort Output].Columns[Cliente_ID]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Merge Join.Inputs[Merge Join Right Input].Columns[Produto_ID]"
+                      cachedDataType="i4"
+                      cachedName="Produto_ID"
+                      cachedSortKeyPosition="3"
+                      lineageId="Package\FATO_VENDA\Sort 1.Outputs[Sort Output].Columns[Produto_ID]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Merge Join.Inputs[Merge Join Right Input].Columns[Data]"
+                      cachedDataType="i4"
+                      cachedName="Data"
+                      cachedSortKeyPosition="4"
+                      lineageId="Package\FATO_VENDA\Sort 1.Outputs[Sort Output].Columns[Data]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Merge Join.Inputs[Merge Join Right Input].Columns[Venda_Liquida]"
+                      cachedDataType="numeric"
+                      cachedName="Venda_Liquida"
+                      cachedPrecision="38"
+                      cachedScale="4"
+                      lineageId="Package\FATO_VENDA\Sort 1.Outputs[Sort Output].Columns[Venda_Liquida]" />
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Merge Join.Inputs[Merge Join Right Input].Columns[Venda_Bruta]"
+                      cachedDataType="numeric"
+                      cachedName="Venda_Bruta"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\FATO_VENDA\Sort 1.Outputs[Sort Output].Columns[Venda_Bruta]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\FATO_VENDA\Merge Join.Outputs[Merge Join Output]"
+                  isSorted="true"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\Merge Join.Outputs[Merge Join Output].Columns[Cliente_ID]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\Merge Join.Outputs[Merge Join Output].Columns[Cliente_ID]"
+                      name="Cliente_ID"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\FATO_VENDA\Merge Join.Inputs[Merge Join Left Input].Columns[Cliente_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\Merge Join.Outputs[Merge Join Output].Columns[Empresa_ID]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\Merge Join.Outputs[Merge Join Output].Columns[Empresa_ID]"
+                      name="Empresa_ID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\FATO_VENDA\Merge Join.Inputs[Merge Join Left Input].Columns[Empresa_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\Merge Join.Outputs[Merge Join Output].Columns[Produto_ID]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\Merge Join.Outputs[Merge Join Output].Columns[Produto_ID]"
+                      name="Produto_ID"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\FATO_VENDA\Merge Join.Inputs[Merge Join Left Input].Columns[Produto_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\Merge Join.Outputs[Merge Join Output].Columns[Data]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\Merge Join.Outputs[Merge Join Output].Columns[Data]"
+                      name="Data"
+                      sortKeyPosition="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\FATO_VENDA\Merge Join.Inputs[Merge Join Left Input].Columns[Data]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\Merge Join.Outputs[Merge Join Output].Columns[Valor_Venda]"
+                      dataType="numeric"
+                      lineageId="Package\FATO_VENDA\Merge Join.Outputs[Merge Join Output].Columns[Valor_Venda]"
+                      name="Valor_Venda"
+                      precision="18"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\FATO_VENDA\Merge Join.Inputs[Merge Join Left Input].Columns[ValorVenda]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\Merge Join.Outputs[Merge Join Output].Columns[Qtd]"
+                      dataType="i8"
+                      lineageId="Package\FATO_VENDA\Merge Join.Outputs[Merge Join Output].Columns[Qtd]"
+                      name="Qtd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\FATO_VENDA\Merge Join.Inputs[Merge Join Left Input].Columns[Qtd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\Merge Join.Outputs[Merge Join Output].Columns[Venda_Liquida]"
+                      dataType="numeric"
+                      lineageId="Package\FATO_VENDA\Merge Join.Outputs[Merge Join Output].Columns[Venda_Liquida]"
+                      name="Venda_Liquida"
+                      precision="38"
+                      scale="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\FATO_VENDA\Merge Join.Inputs[Merge Join Right Input].Columns[Venda_Liquida]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\Merge Join.Outputs[Merge Join Output].Columns[Venda_Bruta]"
+                      dataType="numeric"
+                      lineageId="Package\FATO_VENDA\Merge Join.Outputs[Merge Join Output].Columns[Venda_Bruta]"
+                      name="Venda_Bruta"
+                      precision="18"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\FATO_VENDA\Merge Join.Inputs[Merge Join Right Input].Columns[Venda_Bruta]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\FATO_VENDA\Multicast"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              name="Multicast">
+              <inputs>
+                <input
+                  refId="Package\FATO_VENDA\Multicast.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\FATO_VENDA\Multicast.Outputs[Multicast Output 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\FATO_VENDA\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\FATO_VENDA\Multicast.Outputs[Multicast Output 2]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 2"
+                  synchronousInputId="Package\FATO_VENDA\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\FATO_VENDA\Multicast.Outputs[Multicast Output 3]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 3"
+                  synchronousInputId="Package\FATO_VENDA\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\FATO_VENDA\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\FATO_VENDA\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Sort.Inputs[Sort Input].Columns[Cliente_ID]"
+                      cachedDataType="i4"
+                      cachedName="Cliente_ID"
+                      lineageId="Package\FATO_VENDA\AGG_VALOR_VENDA.Outputs[Aggregate Output 1].Columns[Cliente_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Sort.Inputs[Sort Input].Columns[Empresa_ID]"
+                      cachedDataType="i4"
+                      cachedName="Empresa_ID"
+                      lineageId="Package\FATO_VENDA\AGG_VALOR_VENDA.Outputs[Aggregate Output 1].Columns[Empresa_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Sort.Inputs[Sort Input].Columns[Produto_ID]"
+                      cachedDataType="i4"
+                      cachedName="Produto_ID"
+                      lineageId="Package\FATO_VENDA\AGG_VALOR_VENDA.Outputs[Aggregate Output 1].Columns[Produto_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Sort.Inputs[Sort Input].Columns[Data]"
+                      cachedDataType="i4"
+                      cachedName="Data"
+                      lineageId="Package\FATO_VENDA\AGG_VALOR_VENDA.Outputs[Aggregate Output 1].Columns[Data]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">4</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Sort.Inputs[Sort Input].Columns[ValorVenda]"
+                      cachedDataType="numeric"
+                      cachedName="ValorVenda"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\FATO_VENDA\AGG_VALOR_VENDA.Outputs[Aggregate Output 1].Columns[ValorVenda]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Sort.Inputs[Sort Input].Columns[Qtd]"
+                      cachedDataType="i8"
+                      cachedName="Qtd"
+                      lineageId="Package\FATO_VENDA\AGG_VALOR_VENDA.Outputs[Aggregate Output 1].Columns[Qtd]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\FATO_VENDA\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\Sort.Outputs[Sort Output].Columns[Cliente_ID]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\Sort.Outputs[Sort Output].Columns[Cliente_ID]"
+                      name="Cliente_ID"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\FATO_VENDA\AGG_VALOR_VENDA.Outputs[Aggregate Output 1].Columns[Cliente_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\Sort.Outputs[Sort Output].Columns[Empresa_ID]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\Sort.Outputs[Sort Output].Columns[Empresa_ID]"
+                      name="Empresa_ID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\FATO_VENDA\AGG_VALOR_VENDA.Outputs[Aggregate Output 1].Columns[Empresa_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\Sort.Outputs[Sort Output].Columns[Produto_ID]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\Sort.Outputs[Sort Output].Columns[Produto_ID]"
+                      name="Produto_ID"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\FATO_VENDA\AGG_VALOR_VENDA.Outputs[Aggregate Output 1].Columns[Produto_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\Sort.Outputs[Sort Output].Columns[Data]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\Sort.Outputs[Sort Output].Columns[Data]"
+                      name="Data"
+                      sortKeyPosition="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\FATO_VENDA\AGG_VALOR_VENDA.Outputs[Aggregate Output 1].Columns[Data]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\Sort.Outputs[Sort Output].Columns[ValorVenda]"
+                      dataType="numeric"
+                      lineageId="Package\FATO_VENDA\Sort.Outputs[Sort Output].Columns[ValorVenda]"
+                      name="ValorVenda"
+                      precision="18"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\FATO_VENDA\AGG_VALOR_VENDA.Outputs[Aggregate Output 1].Columns[ValorVenda]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\Sort.Outputs[Sort Output].Columns[Qtd]"
+                      dataType="i8"
+                      lineageId="Package\FATO_VENDA\Sort.Outputs[Sort Output].Columns[Qtd]"
+                      name="Qtd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\FATO_VENDA\AGG_VALOR_VENDA.Outputs[Aggregate Output 1].Columns[Qtd]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\FATO_VENDA\Sort 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\FATO_VENDA\Sort 1.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Sort 1.Inputs[Sort Input].Columns[Empresa_ID]"
+                      cachedDataType="i4"
+                      cachedName="Empresa_ID"
+                      lineageId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Outputs[Aggregate Output 1].Columns[Empresa_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Sort 1.Inputs[Sort Input].Columns[Cliente_ID]"
+                      cachedDataType="i4"
+                      cachedName="Cliente_ID"
+                      lineageId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Outputs[Aggregate Output 1].Columns[Cliente_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Sort 1.Inputs[Sort Input].Columns[Produto_ID]"
+                      cachedDataType="i4"
+                      cachedName="Produto_ID"
+                      lineageId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Outputs[Aggregate Output 1].Columns[Produto_ID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Sort 1.Inputs[Sort Input].Columns[Data]"
+                      cachedDataType="i4"
+                      cachedName="Data"
+                      lineageId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Outputs[Aggregate Output 1].Columns[Data]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">4</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Sort 1.Inputs[Sort Input].Columns[Venda_Liquida]"
+                      cachedDataType="numeric"
+                      cachedName="Venda_Liquida"
+                      cachedPrecision="38"
+                      cachedScale="4"
+                      lineageId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Outputs[Aggregate Output 1].Columns[Venda_Liquida]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\FATO_VENDA\Sort 1.Inputs[Sort Input].Columns[Venda_Bruta]"
+                      cachedDataType="numeric"
+                      cachedName="Venda_Bruta"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Outputs[Aggregate Output 1].Columns[Venda_Bruta]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\FATO_VENDA\Sort 1.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\Sort 1.Outputs[Sort Output].Columns[Empresa_ID]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\Sort 1.Outputs[Sort Output].Columns[Empresa_ID]"
+                      name="Empresa_ID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Outputs[Aggregate Output 1].Columns[Empresa_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\Sort 1.Outputs[Sort Output].Columns[Cliente_ID]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\Sort 1.Outputs[Sort Output].Columns[Cliente_ID]"
+                      name="Cliente_ID"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Outputs[Aggregate Output 1].Columns[Cliente_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\Sort 1.Outputs[Sort Output].Columns[Produto_ID]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\Sort 1.Outputs[Sort Output].Columns[Produto_ID]"
+                      name="Produto_ID"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Outputs[Aggregate Output 1].Columns[Produto_ID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\Sort 1.Outputs[Sort Output].Columns[Data]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\Sort 1.Outputs[Sort Output].Columns[Data]"
+                      name="Data"
+                      sortKeyPosition="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Outputs[Aggregate Output 1].Columns[Data]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\Sort 1.Outputs[Sort Output].Columns[Venda_Liquida]"
+                      dataType="numeric"
+                      lineageId="Package\FATO_VENDA\Sort 1.Outputs[Sort Output].Columns[Venda_Liquida]"
+                      name="Venda_Liquida"
+                      precision="38"
+                      scale="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Outputs[Aggregate Output 1].Columns[Venda_Liquida]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\Sort 1.Outputs[Sort Output].Columns[Venda_Bruta]"
+                      dataType="numeric"
+                      lineageId="Package\FATO_VENDA\Sort 1.Outputs[Sort Output].Columns[Venda_Bruta]"
+                      name="Venda_Bruta"
+                      precision="18"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Outputs[Aggregate Output 1].Columns[Venda_Bruta]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\FATO_VENDA\VENDA"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="VENDA"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\FATO_VENDA\VENDA.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\FATO_VENDA\VENDA.Inputs[Conditional Split Input].Columns[PedidoStatus]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="PedidoStatus"
+                      lineageId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[PedidoStatus]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\FATO_VENDA\VENDA.Outputs[VENDA]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="VENDA"
+                  synchronousInputId="Package\FATO_VENDA\VENDA.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output].Columns[PedidoStatus]} == "E"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">PedidoStatus == "E"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\FATO_VENDA\VENDA.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\FATO_VENDA\VENDA.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\FATO_VENDA\VENDA.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\FATO_VENDA\VENDA.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\FATO_VENDA\VENDA.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\VENDA.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\FATO_VENDA\VENDA.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\FATO_VENDA\VENDA.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\FATO_VENDA.Paths[Aggregate Output 1]"
+              endId="Package\FATO_VENDA\Sort.Inputs[Sort Input]"
+              name="Aggregate Output 1"
+              startId="Package\FATO_VENDA\AGG_VALOR_VENDA.Outputs[Aggregate Output 1]" />
+            <path
+              refId="Package\FATO_VENDA.Paths[Aggregate Output 11]"
+              endId="Package\FATO_VENDA\Sort 1.Inputs[Sort Input]"
+              name="Aggregate Output 1"
+              startId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Outputs[Aggregate Output 1]" />
+            <path
+              refId="Package\FATO_VENDA.Paths[Derived Column Output]"
+              endId="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA.Inputs[Aggregate Input 1]"
+              name="Derived Column Output"
+              startId="Package\FATO_VENDA\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\FATO_VENDA.Paths[Merge Join Output]"
+              endId="Package\FATO_VENDA\FATO_VENDA_DW.Inputs[OLE DB Destination Input]"
+              name="Merge Join Output"
+              startId="Package\FATO_VENDA\Merge Join.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\FATO_VENDA.Paths[Multicast Output 1]"
+              endId="Package\FATO_VENDA\VENDA.Inputs[Conditional Split Input]"
+              name="Multicast Output 1"
+              startId="Package\FATO_VENDA\Multicast.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\FATO_VENDA.Paths[Multicast Output 2]"
+              endId="Package\FATO_VENDA\AGG_VALOR_VENDA.Inputs[Aggregate Input 1]"
+              name="Multicast Output 2"
+              startId="Package\FATO_VENDA\Multicast.Outputs[Multicast Output 2]" />
+            <path
+              refId="Package\FATO_VENDA.Paths[OLE DB Source Output]"
+              endId="Package\FATO_VENDA\Multicast.Inputs[Multicast Input 1]"
+              name="OLE DB Source Output"
+              startId="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\FATO_VENDA.Paths[Sort Output]"
+              endId="Package\FATO_VENDA\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\FATO_VENDA\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\FATO_VENDA.Paths[Sort Output1]"
+              endId="Package\FATO_VENDA\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\FATO_VENDA\Sort 1.Outputs[Sort Output]" />
+            <path
+              refId="Package\FATO_VENDA.Paths[VENDA]"
+              endId="Package\FATO_VENDA\Derived Column.Inputs[Derived Column Input]"
+              name="VENDA"
+              startId="Package\FATO_VENDA\VENDA.Outputs[VENDA]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="144,42"
+          Id="Package\FATO_VENDA"
+          TopLeft="586,237" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\FATO_VENDA">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="130,42"
+          Id="Package\FATO_VENDA\Merge Join"
+          TopLeft="556,489" />
+        <NodeLayout
+          Size="211,42"
+          Id="Package\FATO_VENDA\AGG_VENDA_LIQ_E_BRUTA"
+          TopLeft="663,336" />
+        <NodeLayout
+          Size="112,42"
+          Id="Package\FATO_VENDA\VENDA"
+          TopLeft="707,189" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\FATO_VENDA\Derived Column"
+          TopLeft="682,268" />
+        <NodeLayout
+          Size="222,42"
+          Id="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO"
+          TopLeft="518,28" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\FATO_VENDA\Sort 1"
+          TopLeft="724,412" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\FATO_VENDA\Sort"
+          TopLeft="429,408" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\FATO_VENDA\AGG_VALOR_VENDA"
+          TopLeft="394,331" />
+        <NodeLayout
+          Size="120,42"
+          Id="Package\FATO_VENDA\Multicast"
+          TopLeft="563,110" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\FATO_VENDA\FATO_VENDA_DW"
+          TopLeft="920,485" />
+        <EdgeLayout
+          Id="Package\FATO_VENDA.Paths[VENDA]"
+          TopLeft="761,231">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-16.5569921875,10.11474609375,33.113984375,9.2705078125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FATO_VENDA.Paths[Sort Output1]"
+          TopLeft="777.5,454">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-136.166666666667,35"
+              Start="0,0"
+              End="-136.166666666667,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.7446808510638" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.7446808510638"
+                    Point2="0,20.7446808510638"
+                    Point3="-4,20.7446808510638" />
+                  <mssgle:LineSegment
+                    End="-132.166666666667,20.7446808510638" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-132.166666666667,20.7446808510638"
+                    Point2="-136.166666666667,20.7446808510638"
+                    Point3="-136.166666666667,24.7446808510638" />
+                  <mssgle:LineSegment
+                    End="-136.166666666667,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FATO_VENDA.Paths[Sort Output]"
+          TopLeft="478,450">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="122.666666666667,39"
+              Start="0,0"
+              End="122.666666666667,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.1155015197568" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.1155015197568"
+                    Point2="0,23.1155015197568"
+                    Point3="4,23.1155015197568" />
+                  <mssgle:LineSegment
+                    End="118.666666666667,23.1155015197568" />
+                  <mssgle:CubicBezierSegment
+                    Point1="118.666666666667,23.1155015197568"
+                    Point2="122.666666666667,23.1155015197568"
+                    Point3="122.666666666667,27.1155015197568" />
+                  <mssgle:LineSegment
+                    End="122.666666666667,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FATO_VENDA.Paths[OLE DB Source Output]"
+          TopLeft="626,70">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40"
+              Start="0,0"
+              End="0,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FATO_VENDA.Paths[Multicast Output 2]"
+          TopLeft="604.333333333333,152">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-121.833333333333,179"
+              Start="0,0"
+              End="-121.833333333333,171.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,69.0131578947369" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,69.0131578947369"
+                    Point2="0,73.0131578947369"
+                    Point3="-4,73.0131578947369" />
+                  <mssgle:LineSegment
+                    End="-117.833333333333,73.0131578947369" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-117.833333333333,73.0131578947369"
+                    Point2="-121.833333333333,73.0131578947369"
+                    Point3="-121.833333333333,77.0131578947369" />
+                  <mssgle:LineSegment
+                    End="-121.833333333333,171.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FATO_VENDA.Paths[Multicast Output 1]"
+          TopLeft="641.666666666667,152">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="121.333333333333,37"
+              Start="0,0"
+              End="121.333333333333,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.0921052631579" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.0921052631579"
+                    Point2="0,15.0921052631579"
+                    Point3="4,15.0921052631579" />
+                  <mssgle:LineSegment
+                    End="117.333333333333,15.0921052631579" />
+                  <mssgle:CubicBezierSegment
+                    Point1="117.333333333333,15.0921052631579"
+                    Point2="121.333333333333,15.0921052631579"
+                    Point3="121.333333333333,19.0921052631579" />
+                  <mssgle:LineSegment
+                    End="121.333333333333,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FATO_VENDA.Paths[Merge Join Output]"
+          TopLeft="686,508">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="234,0"
+              Start="0,0"
+              End="226.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="226.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FATO_VENDA.Paths[Derived Column Output]"
+          TopLeft="759,310">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9.5,26"
+              Start="0,0"
+              End="9.5,18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9"
+                    Point2="0,13"
+                    Point3="4,13" />
+                  <mssgle:LineSegment
+                    End="5.5,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.5,13"
+                    Point2="9.5,13"
+                    Point3="9.5,17" />
+                  <mssgle:LineSegment
+                    End="9.5,18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FATO_VENDA.Paths[Aggregate Output 11]"
+          TopLeft="768.5,378">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9,34"
+              Start="0,0"
+              End="9,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13"
+                    Point2="0,17"
+                    Point3="4,17" />
+                  <mssgle:LineSegment
+                    End="5,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5,17"
+                    Point2="9,17"
+                    Point3="9,21" />
+                  <mssgle:LineSegment
+                    End="9,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FATO_VENDA.Paths[Aggregate Output 1]"
+          TopLeft="480.25,373">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\FATO_VENDA\DW_STAGE_VENDA_TRIBUTO">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\FATO_VENDA\FATO_VENDA_DW">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,2929 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/19/2019 2:27:51 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MSEDGEWIN10"
+  DTS:CreatorName="MSEDGEWIN10\IEUser"
+  DTS:DTSID="{2282DA7A-ADF7-45A4-8877-466CA4CA9ACD}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1301.433"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="IMPORT_META_VENDA"
+  DTS:PackageType="5"
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{259D87B6-9813-4262-88CE-80605AF26461}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CSV_META_VENDA]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{ACEAEAD4-175E-4641-BFF0-8F093CCEA540}"
+      DTS:ObjectName="CSV_META_VENDA">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::FilePath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="Z:\PraticaFinal\Dados\csv\">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProdutoID"
+              DTS:DTSID="{9D5FA1E4-9599-49DF-8BB9-13FC8CD85A63}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="JAN"
+              DTS:DTSID="{08F56638-58E1-4863-8352-9476A129D3FD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FEV"
+              DTS:DTSID="{9E76DD3F-378C-476F-B770-B30430F539A3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MAR"
+              DTS:DTSID="{02B918D0-F629-4003-AC82-F329E4C1EEF6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ABR"
+              DTS:DTSID="{549009B5-78C1-43FD-BEED-5611631BE62C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MAI"
+              DTS:DTSID="{56A6F188-5F29-4DDB-AD85-5C6F60CEAED3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="JUN"
+              DTS:DTSID="{02F2C2F4-DE88-490B-8BC1-8E9CE2BEB357}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="JUL"
+              DTS:DTSID="{AF86DE35-C70D-4FA1-A9CD-84F1D28E6F3E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AGO"
+              DTS:DTSID="{AFE1D9BD-BC88-4DF3-9C26-4A12F9346633}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SET"
+              DTS:DTSID="{43935818-F9BE-4D64-A265-2B43C05F82AE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OUT"
+              DTS:DTSID="{9ACD31D7-D86C-4CA3-A5AB-58C77C963F5E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NOV"
+              DTS:DTSID="{BCD61432-A3FD-448C-A463-0FB42DE438AA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DEZ"
+              DTS:DTSID="{C912C4B0-739E-4F93-9629-F5E1B78A480C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BC54923E-07B8-42FB-B5A6-02D82A7AA892}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FilePath">
+      <DTS:VariableValue
+        DTS:DataType="8">Z:\PraticaFinal\Dados\csv\</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Foreach Loop Container"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{6B445A65-ABB9-4B51-ABA7-D40A6A891B66}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Loop Container">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{A8B8EAF7-12BF-4E53-9F64-85822FD70835}"
+        DTS:ObjectName="{A8B8EAF7-12BF-4E53-9F64-85822FD70835}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\Users\IEUser\Desktop\Dados\csv" />
+            <FEFEProperty
+              FileSpec="*.csv*" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\IMPORT_METAS"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{033FBC06-1D4B-4656-94C2-81AAAACC0E29}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="IMPORT_METAS"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Foreach Loop Container\IMPORT_METAS\CreateDataCompetencia"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="CreateDataCompetencia"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\CreateDataCompetencia.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\CreateDataCompetencia.Inputs[Derived Column Input].Columns[Ano]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Ano"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[Ano]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\CreateDataCompetencia.Inputs[Derived Column Input].Columns[NUMERO_MES]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="200"
+                          cachedName="NUMERO_MES"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Lookup.Outputs[Lookup Match Output].Columns[NUMERO_MES]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\CreateDataCompetencia.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Foreach Loop Container\IMPORT_METAS\CreateDataCompetencia.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\CreateDataCompetencia.Outputs[Derived Column Output].Columns[DataCompt]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="250"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\CreateDataCompetencia.Outputs[Derived Column Output].Columns[DataCompt]"
+                          name="DataCompt"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">#{Package\Foreach Loop Container\IMPORT_METAS\Lookup.Outputs[Lookup Match Output].Columns[NUMERO_MES]} + #{Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[Ano]}</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">NUMERO_MES + Ano</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\CreateDataCompetencia.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\IMPORT_METAS\CreateDataCompetencia.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\CreateDataCompetencia.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\CreateDataCompetencia.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\CreateDataCompetencia.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\CreateDataCompetencia.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion"
+                  componentClassID="Microsoft.DataConvert"
+                  contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Data Conversion"
+                  name="Data Conversion"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Inputs[Data Conversion Input]"
+                      name="Data Conversion Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Inputs[Data Conversion Input].Columns[ProdutoID]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="ProdutoID"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[ProdutoID]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Inputs[Data Conversion Input].Columns[JAN]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="JAN"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[JAN]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Inputs[Data Conversion Input].Columns[FEV]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="FEV"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[FEV]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Inputs[Data Conversion Input].Columns[MAR]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="MAR"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[MAR]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Inputs[Data Conversion Input].Columns[ABR]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="ABR"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[ABR]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Inputs[Data Conversion Input].Columns[MAI]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="MAI"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[MAI]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Inputs[Data Conversion Input].Columns[JUN]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="JUN"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[JUN]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Inputs[Data Conversion Input].Columns[JUL]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="JUL"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[JUL]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Inputs[Data Conversion Input].Columns[AGO]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="AGO"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[AGO]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Inputs[Data Conversion Input].Columns[SET]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="SET"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[SET]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Inputs[Data Conversion Input].Columns[OUT]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="OUT"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[OUT]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Inputs[Data Conversion Input].Columns[NOV]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="NOV"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[NOV]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Inputs[Data Conversion Input].Columns[DEZ]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="DEZ"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[DEZ]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output]"
+                      exclusionGroup="1"
+                      name="Data Conversion Output"
+                      synchronousInputId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ProdutoID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ProdutoID]"
+                          name="Copy of ProdutoID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[ProdutoID]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of JAN]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of JAN]"
+                          name="Copy of JAN"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[JAN]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FEV]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FEV]"
+                          name="Copy of FEV"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[FEV]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MAR]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MAR]"
+                          name="Copy of MAR"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[MAR]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ABR]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ABR]"
+                          name="Copy of ABR"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[ABR]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MAI]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MAI]"
+                          name="Copy of MAI"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[MAI]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of JUN]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of JUN]"
+                          name="Copy of JUN"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[JUN]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of JUL]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of JUL]"
+                          name="Copy of JUL"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[JUL]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of AGO]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of AGO]"
+                          name="Copy of AGO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[AGO]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SET]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SET]"
+                          name="Copy of SET"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[SET]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of OUT]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of OUT]"
+                          name="Copy of OUT"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[OUT]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of NOV]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of NOV]"
+                          name="Copy of NOV"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[NOV]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DEZ]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DEZ]"
+                          name="Copy of DEZ"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[DEZ]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Data Conversion Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1"
+                  componentClassID="Microsoft.DataConvert"
+                  contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Data Conversion"
+                  name="Data Conversion 1"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Inputs[Data Conversion Input]"
+                      name="Data Conversion Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Inputs[Data Conversion Input].Columns[Mes]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="200"
+                          cachedName="Mes"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[Mes]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Inputs[Data Conversion Input].Columns[MetaVenda]"
+                          cachedDataType="i4"
+                          cachedName="MetaVenda"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[MetaVenda]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Inputs[Data Conversion Input].Columns[Copy of ProdutoID]"
+                          cachedDataType="i4"
+                          cachedName="Copy of ProdutoID"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[Copy of ProdutoID]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Inputs[Data Conversion Input].Columns[Ano]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Ano"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[Ano]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Inputs[Data Conversion Input].Columns[NUMERO_MES]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="200"
+                          cachedName="NUMERO_MES"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Lookup.Outputs[Lookup Match Output].Columns[NUMERO_MES]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Inputs[Data Conversion Input].Columns[DataCompt]"
+                          cachedDataType="wstr"
+                          cachedLength="250"
+                          cachedName="DataCompt"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\CreateDataCompetencia.Outputs[Derived Column Output].Columns[DataCompt]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Outputs[Data Conversion Output]"
+                      exclusionGroup="1"
+                      name="Data Conversion Output"
+                      synchronousInputId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of Mes]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of Mes]"
+                          name="Copy of Mes"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[Mes]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of MetaVenda]"
+                          dataType="decimal"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of MetaVenda]"
+                          name="Copy of MetaVenda"
+                          scale="18"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[MetaVenda]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of Copy of ProdutoID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of Copy of ProdutoID]"
+                          name="Copy of Copy of ProdutoID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[Copy of ProdutoID]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of Ano]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of Ano]"
+                          name="Copy of Ano"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[Ano]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of NUMERO_MES]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="200"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of NUMERO_MES]"
+                          name="Copy of NUMERO_MES"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\IMPORT_METAS\Lookup.Outputs[Lookup Match Output].Columns[NUMERO_MES]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of DataCompt]"
+                          dataType="date"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of DataCompt]"
+                          name="Copy of DataCompt"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\IMPORT_METAS\CreateDataCompetencia.Outputs[Derived Column Output].Columns[DataCompt]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Outputs[Data Conversion Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Data Conversion Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\IMPORT_METAS\Derived Column"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Derived Column"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\Derived Column.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\Derived Column.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Foreach Loop Container\IMPORT_METAS\Derived Column.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Derived Column.Outputs[Derived Column Output].Columns[FILE_NAME]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="200"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Derived Column.Outputs[Derived Column Output].Columns[FILE_NAME]"
+                          name="FILE_NAME"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">@[User::FilePath]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">@[User::FilePath]</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Derived Column.Outputs[Derived Column Output].Columns[CREATE_TIME]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Derived Column.Outputs[Derived Column Output].Columns[CREATE_TIME]"
+                          name="CREATE_TIME"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[GETDATE]()</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">GETDATE()</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\Derived Column.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\IMPORT_METAS\Derived Column.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="DT_META_VENDA_LOG"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[META_VENDA_LOG]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Connections[OleDbConnection]"
+                      connectionManagerID="{816740BA-061A-4F4C-9725-5C2025960459}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[LOCALHOST SYSTEM]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].Columns[FILE_NAME]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="200"
+                          cachedName="FILE_NAME"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[FILE_NAME]"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Derived Column.Outputs[Derived Column Output].Columns[FILE_NAME]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].Columns[CREATE_TIME]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="CREATE_TIME"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[CREATE_TIME]"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Derived Column.Outputs[Derived Column Output].Columns[CREATE_TIME]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].Columns[Copy of ProdutoID]"
+                          cachedDataType="i4"
+                          cachedName="Copy of ProdutoID"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[ProdutoID]"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ProdutoID]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].Columns[Copy of JAN]"
+                          cachedDataType="i4"
+                          cachedName="Copy of JAN"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[JAN]"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of JAN]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].Columns[Copy of FEV]"
+                          cachedDataType="i4"
+                          cachedName="Copy of FEV"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[FEV]"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FEV]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].Columns[Copy of MAR]"
+                          cachedDataType="i4"
+                          cachedName="Copy of MAR"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[MAR]"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MAR]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].Columns[Copy of ABR]"
+                          cachedDataType="i4"
+                          cachedName="Copy of ABR"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[ABR]"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ABR]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].Columns[Copy of MAI]"
+                          cachedDataType="i4"
+                          cachedName="Copy of MAI"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[MAI]"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MAI]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].Columns[Copy of JUN]"
+                          cachedDataType="i4"
+                          cachedName="Copy of JUN"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[JUN]"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of JUN]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].Columns[Copy of JUL]"
+                          cachedDataType="i4"
+                          cachedName="Copy of JUL"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[JUL]"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of JUL]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].Columns[Copy of AGO]"
+                          cachedDataType="i4"
+                          cachedName="Copy of AGO"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[AGO]"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of AGO]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].Columns[Copy of SET]"
+                          cachedDataType="i4"
+                          cachedName="Copy of SET"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[SET]"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SET]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].Columns[Copy of OUT]"
+                          cachedDataType="i4"
+                          cachedName="Copy of OUT"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[OUT]"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of OUT]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].Columns[Copy of NOV]"
+                          cachedDataType="i4"
+                          cachedName="Copy of NOV"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[NOV]"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of NOV]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].Columns[Copy of DEZ]"
+                          cachedDataType="i4"
+                          cachedName="Copy of DEZ"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[DEZ]"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DEZ]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[ProdutoID]"
+                          dataType="i4"
+                          name="ProdutoID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[JAN]"
+                          dataType="i4"
+                          name="JAN" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[FEV]"
+                          dataType="i4"
+                          name="FEV" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[MAR]"
+                          dataType="i4"
+                          name="MAR" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[ABR]"
+                          dataType="i4"
+                          name="ABR" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[MAI]"
+                          dataType="i4"
+                          name="MAI" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[JUN]"
+                          dataType="i4"
+                          name="JUN" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[JUL]"
+                          dataType="i4"
+                          name="JUL" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[AGO]"
+                          dataType="i4"
+                          name="AGO" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[SET]"
+                          dataType="i4"
+                          name="SET" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[OUT]"
+                          dataType="i4"
+                          name="OUT" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[NOV]"
+                          dataType="i4"
+                          name="NOV" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[DEZ]"
+                          dataType="i4"
+                          name="DEZ" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[FILE_NAME]"
+                          codePage="1252"
+                          dataType="str"
+                          length="200"
+                          name="FILE_NAME" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input].ExternalColumns[CREATE_TIME]"
+                          dataType="dbTimeStamp"
+                          name="CREATE_TIME" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\IMPORT_METAS\FileNamo_to_Ano"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="FileNamo_to_Ano"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\FileNamo_to_Ano.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\FileNamo_to_Ano.Inputs[Derived Column Input].Columns[FILE_NAME]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="200"
+                          cachedName="FILE_NAME"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Derived Column.Outputs[Derived Column Output].Columns[FILE_NAME]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\FileNamo_to_Ano.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Foreach Loop Container\IMPORT_METAS\FileNamo_to_Ano.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\FileNamo_to_Ano.Outputs[Derived Column Output].Columns[Ano]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\FileNamo_to_Ano.Outputs[Derived Column Output].Columns[Ano]"
+                          name="Ano"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[LEFT]([RIGHT](#{Package\Foreach Loop Container\IMPORT_METAS\Derived Column.Outputs[Derived Column Output].Columns[FILE_NAME]},8),4)</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">LEFT(RIGHT(FILE_NAME,8),4)</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\FileNamo_to_Ano.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\IMPORT_METAS\FileNamo_to_Ano.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\FileNamo_to_Ano.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\FileNamo_to_Ano.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\FileNamo_to_Ano.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\FileNamo_to_Ano.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\IMPORT_METAS\Lookup"
+                  componentClassID="Microsoft.Lookup"
+                  contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+                  description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+                  name="Lookup"
+                  usesDispositions="true"
+                  version="6">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement that generates the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[MES_NUM]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommandParam"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[MES_NUM]) [refTable]
+where [refTable].[MES] = ?</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the type of connection used to access the reference dataset."
+                      name="ConnectionType"
+                      typeConverter="LookupConnectionType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the cache type of the lookup table."
+                      name="CacheType"
+                      typeConverter="CacheType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                      name="NoMatchBehavior"
+                      typeConverter="LookupNoMatchBehavior">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                      name="NoMatchCachePercentage">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                      name="MaxMemoryUsage">25</property>
+                    <property
+                      dataType="System.Int64"
+                      description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                      name="MaxMemoryUsage64">25</property>
+                    <property
+                      dataType="System.String"
+                      description="Indicates whether to reference metadata in an XML format."
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="MES" dataType="DT_STR" length="200" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="NUMERO_MES" dataType="DT_STR" length="200" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                      name="ParameterMap">#{Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[Mes]};</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\Lookup.Connections[OleDbConnection]"
+                      connectionManagerID="{816740BA-061A-4F4C-9725-5C2025960459}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[LOCALHOST SYSTEM]"
+                      description="Connection manager used to access lookup data."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\Lookup.Inputs[Lookup Input]"
+                      name="Lookup Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Lookup.Inputs[Lookup Input].Columns[Mes]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="200"
+                          cachedName="Mes"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[Mes]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">MES</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\Lookup.Outputs[Lookup Match Output]"
+                      errorOrTruncationOperation="Lookup"
+                      errorRowDisposition="FailComponent"
+                      exclusionGroup="1"
+                      name="Lookup Match Output"
+                      synchronousInputId="Package\Foreach Loop Container\IMPORT_METAS\Lookup.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Lookup.Outputs[Lookup Match Output].Columns[NUMERO_MES]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Copy Column"
+                          length="200"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Lookup.Outputs[Lookup Match Output].Columns[NUMERO_MES]"
+                          name="NUMERO_MES"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn">NUMERO_MES</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\Lookup.Outputs[Lookup No Match Output]"
+                      description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                      exclusionGroup="1"
+                      name="Lookup No Match Output"
+                      synchronousInputId="Package\Foreach Loop Container\IMPORT_METAS\Lookup.Inputs[Lookup Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\Lookup.Outputs[Lookup Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Lookup Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\IMPORT_METAS\Lookup.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\IMPORT_METAS\Multicast"
+                  componentClassID="Microsoft.Multicast"
+                  contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+                  name="Multicast">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\Multicast.Inputs[Multicast Input 1]"
+                      name="Multicast Input 1">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\Multicast.Outputs[Multicast Output 1]"
+                      deleteOutputOnPathDetached="true"
+                      name="Multicast Output 1"
+                      synchronousInputId="Package\Foreach Loop Container\IMPORT_METAS\Multicast.Inputs[Multicast Input 1]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\Multicast.Outputs[Multicast Output 3]"
+                      deleteOutputOnPathDetached="true"
+                      name="Multicast Output 3"
+                      synchronousInputId="Package\Foreach Loop Container\IMPORT_METAS\Multicast.Inputs[Multicast Input 1]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\Multicast.Outputs[Multicast Output 2]"
+                      dangling="true"
+                      deleteOutputOnPathDetached="true"
+                      name="Multicast Output 2"
+                      synchronousInputId="Package\Foreach Loop Container\IMPORT_METAS\Multicast.Inputs[Multicast Input 1]">
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\IMPORT_METAS\OLE DB Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[META_VENDA]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\OLE DB Destination.Connections[OleDbConnection]"
+                      connectionManagerID="{816740BA-061A-4F4C-9725-5C2025960459}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[LOCALHOST SYSTEM]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of ProdutoID]"
+                          cachedDataType="i4"
+                          cachedName="Copy of ProdutoID"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProdutoID]"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[Copy of ProdutoID]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of DataCompt]"
+                          cachedDataType="date"
+                          cachedName="Copy of DataCompt"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DataCompt]"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of DataCompt]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of MetaVenda]"
+                          cachedDataType="decimal"
+                          cachedName="Copy of MetaVenda"
+                          cachedScale="18"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MetaVenda]"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Outputs[Data Conversion Output].Columns[Copy of MetaVenda]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProdutoID]"
+                          dataType="i4"
+                          name="ProdutoID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DataCompt]"
+                          dataType="dbDate"
+                          name="DataCompt" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MetaVenda]"
+                          dataType="numeric"
+                          name="MetaVenda"
+                          precision="18"
+                          scale="2" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\IMPORT_METAS\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="SC_META_VENDA"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[CSV_META_VENDA]"
+                      connectionManagerRefId="Package.ConnectionManagers[CSV_META_VENDA]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[ProdutoID]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].ExternalColumns[ProdutoID]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[ProdutoID]"
+                          name="ProdutoID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[JAN]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].ExternalColumns[JAN]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[JAN]"
+                          name="JAN"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[FEV]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].ExternalColumns[FEV]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[FEV]"
+                          name="FEV"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[MAR]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].ExternalColumns[MAR]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[MAR]"
+                          name="MAR"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[ABR]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].ExternalColumns[ABR]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[ABR]"
+                          name="ABR"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[MAI]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].ExternalColumns[MAI]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[MAI]"
+                          name="MAI"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[JUN]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].ExternalColumns[JUN]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[JUN]"
+                          name="JUN"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[JUL]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].ExternalColumns[JUL]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[JUL]"
+                          name="JUL"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[AGO]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].ExternalColumns[AGO]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[AGO]"
+                          name="AGO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[SET]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].ExternalColumns[SET]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[SET]"
+                          name="SET"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[OUT]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].ExternalColumns[OUT]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[OUT]"
+                          name="OUT"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[NOV]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].ExternalColumns[NOV]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[NOV]"
+                          name="NOV"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[DEZ]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].ExternalColumns[DEZ]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].Columns[DEZ]"
+                          name="DEZ"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].ExternalColumns[ProdutoID]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="ProdutoID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].ExternalColumns[JAN]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="JAN" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].ExternalColumns[FEV]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="FEV" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].ExternalColumns[MAR]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="MAR" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].ExternalColumns[ABR]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="ABR" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].ExternalColumns[MAI]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="MAI" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].ExternalColumns[JUN]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="JUN" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].ExternalColumns[JUL]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="JUL" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].ExternalColumns[AGO]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="AGO" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].ExternalColumns[SET]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="SET" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].ExternalColumns[OUT]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="OUT" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].ExternalColumns[NOV]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="NOV" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output].ExternalColumns[DEZ]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="DEZ" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="65001"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot"
+                  componentClassID="Microsoft.UnPivot"
+                  contactInfo="Unpivot;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Expands an un-normalized data flow into a more normalized version. Values from multiple columns of a single record expand to multiple records in a single column. For example, expand a table that lists athletic scores with a column for each game to more records and a single score column."
+                  name="Unpivot">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Inputs[Unpivot Input]"
+                      hasSideEffects="true"
+                      name="Unpivot Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Inputs[Unpivot Input].Columns[Copy of JAN]"
+                          cachedDataType="i4"
+                          cachedName="Copy of JAN"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of JAN]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                              name="DestinationColumn">#{Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[MetaVenda]}</property>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the value written to the PivotKey column in the output row."
+                              expressionType="Notify"
+                              name="PivotKeyValue">JAN</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Inputs[Unpivot Input].Columns[Copy of FEV]"
+                          cachedDataType="i4"
+                          cachedName="Copy of FEV"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of FEV]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                              name="DestinationColumn">#{Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[MetaVenda]}</property>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the value written to the PivotKey column in the output row."
+                              expressionType="Notify"
+                              name="PivotKeyValue">FEV</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Inputs[Unpivot Input].Columns[Copy of MAR]"
+                          cachedDataType="i4"
+                          cachedName="Copy of MAR"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MAR]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                              name="DestinationColumn">#{Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[MetaVenda]}</property>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the value written to the PivotKey column in the output row."
+                              expressionType="Notify"
+                              name="PivotKeyValue">MAR</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Inputs[Unpivot Input].Columns[Copy of ABR]"
+                          cachedDataType="i4"
+                          cachedName="Copy of ABR"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ABR]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                              name="DestinationColumn">#{Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[MetaVenda]}</property>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the value written to the PivotKey column in the output row."
+                              expressionType="Notify"
+                              name="PivotKeyValue">ABR</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Inputs[Unpivot Input].Columns[Copy of MAI]"
+                          cachedDataType="i4"
+                          cachedName="Copy of MAI"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MAI]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                              name="DestinationColumn">#{Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[MetaVenda]}</property>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the value written to the PivotKey column in the output row."
+                              expressionType="Notify"
+                              name="PivotKeyValue">MAI</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Inputs[Unpivot Input].Columns[Copy of JUN]"
+                          cachedDataType="i4"
+                          cachedName="Copy of JUN"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of JUN]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                              name="DestinationColumn">#{Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[MetaVenda]}</property>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the value written to the PivotKey column in the output row."
+                              expressionType="Notify"
+                              name="PivotKeyValue">JUN</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Inputs[Unpivot Input].Columns[Copy of JUL]"
+                          cachedDataType="i4"
+                          cachedName="Copy of JUL"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of JUL]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                              name="DestinationColumn">#{Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[MetaVenda]}</property>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the value written to the PivotKey column in the output row."
+                              expressionType="Notify"
+                              name="PivotKeyValue">JUL</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Inputs[Unpivot Input].Columns[Copy of AGO]"
+                          cachedDataType="i4"
+                          cachedName="Copy of AGO"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of AGO]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                              name="DestinationColumn">#{Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[MetaVenda]}</property>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the value written to the PivotKey column in the output row."
+                              expressionType="Notify"
+                              name="PivotKeyValue">AGO</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Inputs[Unpivot Input].Columns[Copy of SET]"
+                          cachedDataType="i4"
+                          cachedName="Copy of SET"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SET]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                              name="DestinationColumn">#{Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[MetaVenda]}</property>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the value written to the PivotKey column in the output row."
+                              expressionType="Notify"
+                              name="PivotKeyValue">SET</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Inputs[Unpivot Input].Columns[Copy of OUT]"
+                          cachedDataType="i4"
+                          cachedName="Copy of OUT"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of OUT]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                              name="DestinationColumn">#{Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[MetaVenda]}</property>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the value written to the PivotKey column in the output row."
+                              expressionType="Notify"
+                              name="PivotKeyValue">OUT</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Inputs[Unpivot Input].Columns[Copy of NOV]"
+                          cachedDataType="i4"
+                          cachedName="Copy of NOV"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of NOV]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                              name="DestinationColumn">#{Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[MetaVenda]}</property>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the value written to the PivotKey column in the output row."
+                              expressionType="Notify"
+                              name="PivotKeyValue">NOV</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Inputs[Unpivot Input].Columns[Copy of DEZ]"
+                          cachedDataType="i4"
+                          cachedName="Copy of DEZ"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of DEZ]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                              name="DestinationColumn">#{Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[MetaVenda]}</property>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the value written to the PivotKey column in the output row."
+                              expressionType="Notify"
+                              name="PivotKeyValue">DEZ</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Inputs[Unpivot Input].Columns[Copy of ProdutoID]"
+                          cachedDataType="i4"
+                          cachedName="Copy of ProdutoID"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ProdutoID]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                              name="DestinationColumn">#{Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[Copy of ProdutoID]}</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the value written to the PivotKey column in the output row."
+                              expressionType="Notify"
+                              name="PivotKeyValue" />
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Inputs[Unpivot Input].Columns[Ano]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Ano"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\FileNamo_to_Ano.Outputs[Derived Column Output].Columns[Ano]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The lineage ID of the output column that will receive the value from this input column. Or -1 if column's value is not used in output rows."
+                              name="DestinationColumn">#{Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[Ano]}</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the value written to the PivotKey column in the output row."
+                              expressionType="Notify"
+                              name="PivotKeyValue" />
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output]"
+                      name="Unpivot Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[Mes]"
+                          codePage="1252"
+                          dataType="str"
+                          length="200"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[Mes]"
+                          name="Mes">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                              name="PivotKey">true</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[MetaVenda]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[MetaVenda]"
+                          name="MetaVenda">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                              name="PivotKey">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[Copy of ProdutoID]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[Copy of ProdutoID]"
+                          name="Copy of ProdutoID">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                              name="PivotKey">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[Ano]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output].Columns[Ano]"
+                          name="Ano">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the value in the PivotKeyValue property is written to the column in the new row."
+                              name="PivotKey">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Foreach Loop Container\IMPORT_METAS.Paths[Data Conversion Output]"
+                  endId="Package\Foreach Loop Container\IMPORT_METAS\Derived Column.Inputs[Derived Column Input]"
+                  name="Data Conversion Output"
+                  startId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Outputs[Data Conversion Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\IMPORT_METAS.Paths[Data Conversion Output1]"
+                  endId="Package\Foreach Loop Container\IMPORT_METAS\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Data Conversion Output"
+                  startId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Outputs[Data Conversion Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\IMPORT_METAS.Paths[Derived Column Output]"
+                  endId="Package\Foreach Loop Container\IMPORT_METAS\Multicast.Inputs[Multicast Input 1]"
+                  name="Derived Column Output"
+                  startId="Package\Foreach Loop Container\IMPORT_METAS\Derived Column.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\IMPORT_METAS.Paths[Derived Column Output1]"
+                  endId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Inputs[Unpivot Input]"
+                  name="Derived Column Output"
+                  startId="Package\Foreach Loop Container\IMPORT_METAS\FileNamo_to_Ano.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\IMPORT_METAS.Paths[Derived Column Output2]"
+                  endId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1.Inputs[Data Conversion Input]"
+                  name="Derived Column Output"
+                  startId="Package\Foreach Loop Container\IMPORT_METAS\CreateDataCompetencia.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\IMPORT_METAS.Paths[Flat File Source Output]"
+                  endId="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA.Outputs[Flat File Source Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\IMPORT_METAS.Paths[Lookup Match Output]"
+                  endId="Package\Foreach Loop Container\IMPORT_METAS\CreateDataCompetencia.Inputs[Derived Column Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Foreach Loop Container\IMPORT_METAS\Lookup.Outputs[Lookup Match Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\IMPORT_METAS.Paths[Multicast Output 1]"
+                  endId="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG.Inputs[OLE DB Destination Input]"
+                  name="Multicast Output 1"
+                  startId="Package\Foreach Loop Container\IMPORT_METAS\Multicast.Outputs[Multicast Output 1]" />
+                <path
+                  refId="Package\Foreach Loop Container\IMPORT_METAS.Paths[Multicast Output 3]"
+                  endId="Package\Foreach Loop Container\IMPORT_METAS\FileNamo_to_Ano.Inputs[Derived Column Input]"
+                  name="Multicast Output 3"
+                  startId="Package\Foreach Loop Container\IMPORT_METAS\Multicast.Outputs[Multicast Output 3]" />
+                <path
+                  refId="Package\Foreach Loop Container\IMPORT_METAS.Paths[Unpivot Output]"
+                  endId="Package\Foreach Loop Container\IMPORT_METAS\Lookup.Inputs[Lookup Input]"
+                  name="Unpivot Output"
+                  startId="Package\Foreach Loop Container\IMPORT_METAS\Unpivot.Outputs[Unpivot Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{0E7EF1C1-8C73-49FB-938C-3CE8D463CA2C}"
+          DTS:ObjectName="{0E7EF1C1-8C73-49FB-938C-3CE8D463CA2C}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::FilePath" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Foreach Loop Container\IMPORT_METAS"
+          TopLeft="28,42" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="205,139"
+          Size="205,182"
+          Id="Package\Foreach Loop Container"
+          TopLeft="532,186" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Foreach Loop Container\IMPORT_METAS">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Foreach Loop Container\IMPORT_METAS\Derived Column"
+          TopLeft="185,185" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Foreach Loop Container\IMPORT_METAS\SC_META_VENDA"
+          TopLeft="174,40" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion"
+          TopLeft="165,117" />
+        <NodeLayout
+          Size="115,42"
+          Id="Package\Foreach Loop Container\IMPORT_METAS\Unpivot"
+          TopLeft="563,283" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG"
+          TopLeft="153,375" />
+        <NodeLayout
+          Size="120,42"
+          Id="Package\Foreach Loop Container\IMPORT_METAS\Multicast"
+          TopLeft="210,270" />
+        <NodeLayout
+          Size="162,42"
+          Id="Package\Foreach Loop Container\IMPORT_METAS\FileNamo_to_Ano"
+          TopLeft="374,280" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Foreach Loop Container\IMPORT_METAS\OLE DB Destination"
+          TopLeft="927,441" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Foreach Loop Container\IMPORT_METAS\Data Conversion 1"
+          TopLeft="924,352" />
+        <NodeLayout
+          Size="192,42"
+          Id="Package\Foreach Loop Container\IMPORT_METAS\CreateDataCompetencia"
+          TopLeft="915,281" />
+        <NodeLayout
+          Size="113,42"
+          Id="Package\Foreach Loop Container\IMPORT_METAS\Lookup"
+          TopLeft="712,283" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\IMPORT_METAS.Paths[Derived Column Output]"
+          TopLeft="262,227">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8,43"
+              Start="0,0"
+              End="8,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.5"
+                    Point2="0,21.5"
+                    Point3="4,21.5" />
+                  <mssgle:LineSegment
+                    End="4,21.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4,21.5"
+                    Point2="8,21.5"
+                    Point3="8,25.5" />
+                  <mssgle:LineSegment
+                    End="8,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\IMPORT_METAS.Paths[Data Conversion Output1]"
+          TopLeft="1009.5,394">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47"
+              Start="0,0"
+              End="0,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\IMPORT_METAS.Paths[Data Conversion Output]"
+          TopLeft="243,159">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19,26"
+              Start="0,0"
+              End="19,18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9"
+                    Point2="0,13"
+                    Point3="4,13" />
+                  <mssgle:LineSegment
+                    End="15,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15,13"
+                    Point2="19,13"
+                    Point3="19,17" />
+                  <mssgle:LineSegment
+                    End="19,18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\IMPORT_METAS.Paths[Unpivot Output]"
+          TopLeft="678,304">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="34,0"
+              Start="0,0"
+              End="26.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="26.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\IMPORT_METAS.Paths[Multicast Output 3]"
+          TopLeft="330,291">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="44,10"
+              Start="0,0"
+              End="36.5,10">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18,0"
+                    Point2="22,0"
+                    Point3="22,4" />
+                  <mssgle:LineSegment
+                    End="22,6" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22,6"
+                    Point2="22,10"
+                    Point3="26,10" />
+                  <mssgle:LineSegment
+                    End="36.5,10" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\IMPORT_METAS.Paths[Multicast Output 1]"
+          TopLeft="270,312">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-22,63"
+              Start="0,0"
+              End="-22,55.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.5"
+                    Point2="0,31.5"
+                    Point3="-4,31.5" />
+                  <mssgle:LineSegment
+                    End="-18,31.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18,31.5"
+                    Point2="-22,31.5"
+                    Point3="-22,35.5" />
+                  <mssgle:LineSegment
+                    End="-22,55.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\IMPORT_METAS.Paths[Lookup Match Output]"
+          TopLeft="825,303">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="90,0"
+              Start="0,0"
+              End="82.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="82.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-6.94138671875,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\IMPORT_METAS.Paths[Flat File Source Output]"
+          TopLeft="255.5,82">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-12.5,35"
+              Start="0,0"
+              End="-12.5,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.5"
+                    Point2="0,17.5"
+                    Point3="-4,17.5" />
+                  <mssgle:LineSegment
+                    End="-8.5,17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-8.5,17.5"
+                    Point2="-12.5,17.5"
+                    Point3="-12.5,21.5" />
+                  <mssgle:LineSegment
+                    End="-12.5,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\IMPORT_METAS.Paths[Derived Column Output2]"
+          TopLeft="1008.75,323">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29"
+              Start="0,0"
+              End="0,21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\IMPORT_METAS.Paths[Derived Column Output1]"
+          TopLeft="536,302.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="27,0"
+              Start="0,0"
+              End="19.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="19.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Loop Container\IMPORT_METAS\DT_META_VENDA_LOG">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Loop Container\IMPORT_METAS\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Loop Container\IMPORT_METAS\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[MES_NUM]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
